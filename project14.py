@@ -1,6 +1,13 @@
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
+import random  
+print("Starting password generator...")
 
-symmetric_diff = set1.symmetric_difference(set2)
+characters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
 
-print("Symmetric Difference:", symmetric_diff)
+password_length = int(input("Enter desired password length: "))
+
+password = []
+for i in range(password_length):
+    
+    password.append(random.choice(characters))
+password = ''.join(password)
+print("Your new password is:"+password)
